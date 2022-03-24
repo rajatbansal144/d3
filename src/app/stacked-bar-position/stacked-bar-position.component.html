@@ -1,0 +1,19 @@
+<div   class="row m-0 mt-2">
+
+  <div class="col-3 text-center  ">
+    <div *ngIf="stackedBarEmpty" class="border_bt width font_color ml-auto">{{stackedBarInputData[0].High}} </div>
+    <div [style.display]="!stackedBarEmpty ? 'block' : 'none'"  class="border_bt width font_color ml-auto">--</div>
+  
+    <div class="pt-0 width font_color ml-auto">total</div>
+  </div>
+
+  <div [style.display]="stackedBarEmpty ? 'block' : 'none'" class="col-9 mt-0 ">
+    <app-stacked-bar [stackedBarInputData]="stackedBarInputData"></app-stacked-bar>
+  </div>
+  <div  class = "mt-3 ml-5"[style.display]="!stackedBarEmpty ? 'block' : 'none'">
+    <div class="size"></div>
+  </div>
+</div>
+
+
+

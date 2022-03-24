@@ -1,0 +1,23 @@
+.bg_1{
+    background-color: #E4DD7B;
+}
+.bg_2{
+    background-color: #B8ED93
+    ;
+}
+.bg_3{
+    background-color: #EFB6AA
+    ;
+}
+.bg_4{
+    background-color: #CCCCCC
+    ;
+}
+
+.font{
+font-size: 13px;
+}
+.numeric_font{
+font-size: 22px;
+font-weight: 600;
+}

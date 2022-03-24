@@ -1,0 +1,18 @@
+<!-- <div  class="text-center">
+  <app-pie [pieInputdata]="pieInputdata"></app-pie>
+</div> -->
+
+<!-- 
+<div *ngIf="emptyPie; then thenBlock else elseBlock"></div>
+<ng-template #thenBlock> <app-pie [pieInputdata]="pieInputdata"></app-pie></ng-template>
+<ng-template #elseBlock>No Progress Yet.</ng-template> -->
+
+<div [style.display]="emptyPie ? 'block' : 'none'">
+  <app-pie [pieInputdata]="pieInputdata"></app-pie>
+</div>
+<div class="text-center  m-0" [style.display]="!emptyPie ? 'block' : 'none'">
+  <div class="row m-0">
+ <div class="col-6 "><i class=" float-right fa fa-pie-chart pie_size" aria-hidden="true"></i></div>
+ <div class="col-6 "> <label class="p-0 m-0 mt-3 float-left label_size">No Progress Yet</label></div> 
+ 
+</div></div>

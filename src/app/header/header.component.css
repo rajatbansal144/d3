@@ -1,0 +1,184 @@
+.bg_color{
+    background-color: rgba(213, 207, 200, 0.856);
+}
+.Search_top_padding{
+  padding-top:4.25px;
+}
+.height{
+  height: 6.6vh;
+}
+
+.text_color{
+    color: rgba(104, 102, 100, 0.644);
+ font-weight: 600;
+letter-spacing: 2px;
+font-size: 1.2rem;
+/* padding-top: 0.3rem; */
+}
+.name_font{
+  font-size: 16px;
+  font-weight: 500;
+  text-align: center;
+
+}
+.designation_font{
+/* line-height: 10px; */
+ font-size: 14px;
+ /* margin: auto; */
+ text-align: center;
+}
+.dot {
+    padding-top: 0.2rem;
+    height: 30px;
+    width: 30px;
+    background-color: rgba(87, 85, 83, 0.644);;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+  }
+.bell_font{
+ 
+    text-align: center;
+    color: white;
+    font-size: 1.2rem;
+}
+
+ .badge1 {
+
+    display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+      position: absolute;  
+    top: 4px;  
+    right: 94.5%;  
+   
+    background-color: yellow;  
+    color: black;  
+  }  
+  .badge2 {
+      display: inline-block;
+    padding: .25em .4em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25rem;
+      position: absolute;  
+    top: 4px;  
+    /* right: 60px%;   */
+    background-color: rgb(63, 163, 255);  
+    color: black;  
+  }  
+  .pt_bell{
+    padding-top: 8px;;
+}
+.notify_icon{
+    margin-top: 0.5rem;
+    color: rgba(87, 85, 83, 0.644);
+    font-size: 1.9rem;
+}
+.search-container input{
+   
+       width:75%;
+    border: none;
+}
+.search_icon{
+    width: 10%;
+    text-align: center;
+    background: rgba(68, 67, 66, 0.644);
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    color:white;
+}
+.search-container button {  
+      width: 15%;
+    background: rgba(68, 67, 66, 0.644);
+    font-size: 1.5rem;
+    border: none;
+    cursor: pointer;
+    color:white;
+  }
+
+
+  @media screen and (max-width: 1020px) {
+    .text_color{
+        color: rgba(104, 102, 100, 0.644);
+     font-weight: 500;
+    letter-spacing: 1px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    /* padding-left: 1rem; */
+    }
+    .dot {
+        padding-top: 0rem;
+        height: 25px;
+        width: 25px;
+        background-color: rgba(87, 85, 83, 0.644);;
+        border-radius: 50%;
+        display: inline-block;
+        text-align: center;
+      }
+    .bell_font{
+        
+        text-align: center;
+        color: white;
+        font-size: 1rem;
+    }
+    
+     .name_font{
+         font-size: 14px;
+         font-weight: 500;
+         text-align: center;
+
+     }
+    .designation_font{
+/* line-height: 10px; */
+        font-size: 13px;
+        /* margin: auto; */
+        text-align: center;
+    }
+    .notify_icon{
+       
+        color: rgba(87, 85, 83, 0.644);
+        font-size: 1.6rem;
+    }
+  .logo_padding{
+    padding: 0.25rem;
+  }
+.pt_bell{
+    padding-top: 8px;;
+}
+.search_icon{
+    margin-top: 0px;
+    width: 11%;
+    height: 27%;
+    /* width: 8%; */
+    /* background: rgba(68, 67, 66, 0.644); */
+    font-size: 1.07rem;
+    border: none;
+    cursor: pointer;
+    color:white;
+}
+.search-container input{
+    margin-top: 0%;
+   height: 50%;
+    width:70%;
+    border: none;
+}
+.badge1 { 
+    right: 91%; 
+   
+  }  
+  .Search_top_padding{
+    padding-top: 8px;
+  }
+  }

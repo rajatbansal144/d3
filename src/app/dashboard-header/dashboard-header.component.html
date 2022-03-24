@@ -1,0 +1,8 @@
+<div class=" height row m-0">
+<p class=" m-0 mt-2">Dashbord &nbsp;</p>
+<div *ngFor="let item of menuItems" class="size " (click)= "onItemClick(item.Text)">
+ <p class =" m-0 text-center font_size " > {{item.Text}}</p>
+ <div *ngIf="item.IsSelected" style="background-color: #3fa3ff; height: 4px;"></div>
+</div>
+</div>
+<!-- <router-outlet name="sidebar"></router-outlet> -->

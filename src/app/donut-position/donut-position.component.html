@@ -1,0 +1,22 @@
+<div class="row m-0">
+  <div class="row m-0 col-6">
+    <div class="mt-4 py-0 col-3 text-center">
+      <span class="font_color">SPI</span>
+    </div>
+    <div class="float-right">
+      <div class="col-9 ml-auto">
+        
+        <app-donut #ch1 [id]="'ch1'" [centerValue]="donutInputData.spiIndex" [donutInputData]="donutInputData.firstDonutData"></app-donut>
+      </div>
+    </div>
+  </div>
+  <div class="row m-0 col-6  border-left">
+    <div class="">
+      <app-donut #ch2 [id]="'ch2'" [centerValue]="donutInputData.indexValue" [donutInputData]="donutInputData.secondDonutData"></app-donut>
+      
+    </div>
+    <div>
+      <label class="mt-4 font_color  text-center">Missed {{donutInputData.missedTasks}} of {{donutInputData.tasks}}</label>
+    </div>
+  </div>
+</div>

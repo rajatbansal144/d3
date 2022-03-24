@@ -1,0 +1,26 @@
+<div class="row m-0 text-center">
+  <div *ngFor="let data of threeDivInputData" class="col-4 pl-4 pr-2">
+    <div [ngClass]="data.color">
+      <p class="m-0 font">{{data.Name}}</p>
+      <p class="m-0 font"> {{data.Name2}}</p>
+      <p class="m-0 numeric_font">{{data.Value}}</p>
+    </div>
+  </div>
+  <!-- <div *ngIf="threeDivInputData.length" class="col-4  px-3">
+    <div class="bg_2">
+      <p class="m-0 font">Open</p>
+      <p class="m-0 font"> Milestones</p>
+      <p class="m-0 numeric_font">56</p>
+    </div>
+  </div> -->
+  <!-- <div class="col-4 pr-4 pl-2">
+    <div class="bg_3">
+      <p class="m-0 font">Open</p>
+      <p class="m-0 font"> Milestones</p>
+      <p class="m-0 numeric_font">9</p>
+    </div>
+  </div> -->
+
+
+
+</div>

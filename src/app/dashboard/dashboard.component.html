@@ -1,0 +1,235 @@
+<div class="row m-0">
+
+  <div class="col-8 p-0 ">
+    <app-test2 [nodes]="nodes[0]" (selectNode)="selectNode($event)"></app-test2>
+    <!-- <div *ngIf="node!=''" id="note">Note: {{note}}</div> -->
+
+    <div class="row mx-0  p-0  pb-1 ">
+
+      <div class=" px-1  col-6">
+        <div class="row m-0  p-0 mt-1  pb-1 ">
+          
+          <div class="modal fade" id="addkpi" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+            aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="exampleModalLongTitle">Select KPI</h5>
+                  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                  </button>
+                </div>
+                <div class="modal-body">
+                  <div *ngFor="let category of KPI" class="p-field-checkbox">
+                    <!-- <p-checkbox [(ngModel)]="checked" binary="true" inputId="binary"></p-checkbox> -->
+                    <p-checkbox name="group2" [value]="category" [(ngModel)]="selectedCategories"
+                      [inputId]="category.key" (onChange)="checklength()"></p-checkbox>
+                    <label class="m-0 p-1" [for]="category.key">{{category.name}}</label>
+                  </div>
+                  <p class="text-primary mt-2">**Please select {{selectionLimit}} boxes to continue</p>
+                </div>
+                <div class="modal-footer">
+                  <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button> -->
+
+                  <button type="button" class="btn btn-primary" [disabled]="!saveButton" data-dismiss="modal"
+                    (click)="selectedKpi()">Save
+                    </button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+      
+                </div>
+              </div>
+            </div>
+            <div style="cursor: pointer;position: absolute;right: 30px;bottom: 30px;">
+              <!-- <i class="fa fa-plus-circle plus_icon  " aria-hidden="true"></i> -->
+              <img src="../assets/images/bot_gif.gif" height="127px" alt="Bot for you">
+              <p class="m-0 " style="font-weight: bold;">Cognitive Assistant</p>
+                            
+                </div>
+              </div>
+          
+  <div class="col-4 p-0 ">
+
+
+
+
+    <div *ngFor="let KPI of showKpi" class="height border p-0 mt-1 pt-1 pb-1" [ngClass]="{'doubleHieght' : KPI.type == '4'}">
+
+      <div class="text-center dropdown py-0">
+        <i class=" icon_size float-left pl-1 fa  font_color" [ngClass]="KPI.fontAwsomeIcon" aria-hidden="true"></i>
+        <label class="font_weight">{{KPI.name}}</label>
+        <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true" type="button"
+          id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"></i>
+        <div class="dropdown-menu menu_style" aria-labelledby="dropdownMenuButton">
+          <div class="row p-2 m-0">
+            <div class="p-0">
+              <i class="px-2    fa fa-file-image-o font_color" aria-hidden="true"></i>
+            </div>
+            <div class="p-0">
+              <a class="popup_links" (click)="showMetaData(KPI.type)" href="#">Metadata</a>
+            </div>
+          </div>
+          <div class="row p-2 m-0">
+            <div class="p-0">
+              <i class="px-2    fa fa-bar-chart font_color" aria-hidden="true"></i>
+            </div>
+            <div class="p-0">
+              <a class="popup_links" href="#">Trends</a>
+            </div>
+          </div>
+          <div class="row p-2 m-0">
+            <div class="p-0">
+              <i class="px-2    fa fa-envelope-o font_color" aria-hidden="true"></i>
+            </div>
+            <div class="p-0">
+              <a class="popup_links" href="#">Email</a>
+            </div>
+          </div>
+          <div class="row p-2 m-0">
+            <div class="p-0">
+              <i class="px-2    fa fa-download font_color" aria-hidden="true"></i>
+            </div>
+            <div class="p-0">
+              <a class="popup_links" href="#">Export</a>
+            </div>
+          </div>
+          <div class="row p-2 m-0">
+            <div class="p-0">
+              <i class="px-2    fa fa-print font_color" aria-hidden="true"></i>
+            </div>
+            <div class="p-0">
+              <a class="popup_links" href="#">Print</a>
+            </div>
+          </div>
+
+        </div>
+        <i class="pr-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+      </div>
+      <div *ngIf="(KPI.type=== '1')">
+        <app-donut-position [donutInputData]="spMainData"></app-donut-position>
+
+      </div>
+      <div *ngIf="(KPI.type=== '2')">
+        <app-half-donut-position [halfDonutInputData]="halfDonutInputData"></app-half-donut-position>
+      </div>
+      <div *ngIf="(KPI.type=== '3')">
+        <app-stacked-bar-position [stackedBarInputData]="stackedBarInputData"></app-stacked-bar-position>
+      </div>
+      <div *ngIf="(KPI.type=== '4')">
+        <app-pie-position [pieInputdata]="pieInputdata"></app-pie-position>
+      </div>
+      <div *ngIf="(KPI.type=== '5')">
+        <div [style.display]="groupedBarEmpty ? 'block' : 'none'">
+        
+          <app-grouped-bar [groupedBarInputData]="groupedBarInputData"></app-grouped-bar>
+        </div>
+        <div [style.display]="!groupedBarEmpty ? 'block' : 'none'">
+          <div class="row m-0">
+            <div class="col-3 "><i class=" float-right fa fa-database graph_size" aria-hidden="true"></i></div>
+            <div class="col-9 "> <label class="p-0 m-0 mt-3 float-left label_size">No Data For Selected Node</label></div> 
+            
+           </div>
+    </div>
+      </div> 
+      
+      <div *ngIf="(KPI.type=== '6')">
+       
+        <app-three-div-graph [threeDivInputData]="threeDivInputData"></app-three-div-graph>
+      </div>
+      <div *ngIf="(KPI.type=== '7')">
+        
+        <app-gauge-position></app-gauge-position>
+      </div>
+    
+
+    </div>
+    <div class="cls-float" data-toggle="modal" data-target="#addkpi" style="cursor: pointer;position: absolute;right: 30px;bottom: 30px;">
+      <i class="fa fa-plus-circle plus_icon "  aria-hidden="true" ></i>
+     </div> 
+        <!-- Code for structure completed required later -->
+    <!--     <div class=" height  p-0 border mt-1 pt-1 pb-1">
+      <div class="   p-0  pt-1">
+        <div class=" py-0">
+          <i class=" icon_size float-left pl-1 fa fa-file-text-o font_color" aria-hidden="true"></i>
+          <label class="font_weight px-2">Structures Completed<span class="head_font pl-1">(Actual Vs
+              Projected)</span></label>
+          <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true"></i>
+          <i class="pr-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+        </div>
+        <div class="clear p-0">
+          <div class="p-0 mt-0 ">
+            <app-stacked-bar2></app-stacked-bar2>
+
+          </div>
+          <div class="p-0 float-right text-center ">
+
+            <label class="m-0 font_size  border pb-0 px-2"> Total:140</label>
+
+          </div>
+        </div>
+      </div>
+    </div> -->
+
+
+
+  </div>
+  <!-- <p-table [value]="products">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Code</th>
+            <th>Name</th>
+            <th>Category</th>
+            <th>Quantity</th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{product.code}}</td>
+            <td>{{product.name}}</td>
+            <td>{{product.category}}</td>
+            <td>{{product.quantity}}</td>
+        </tr>
+    </ng-template>
+</p-table> -->
+</div>
+<p-dialog header="List of Tasks" [(visible)]="display" [style]="{'margin-left':'150px', 'margin-right':'150px'}">
+  <p-table class="cls-table"  sortMode="multiple" [value]="selectedTasks">
+    <ng-template pTemplate="header">
+        <tr>
+            <th pSortableColumn="Id" style="width: 2.25em">Id
+              <p-sortIcon field="Id"></p-sortIcon>
+            </th>
+
+         
+            <th  pSortableColumn="Title" style="width: 2.25em">Title
+              <p-sortIcon field="Title"></p-sortIcon>
+            </th>
+            <th  pSortableColumn="Description" style="width: 2.25em">Description
+              <p-sortIcon field="Description"></p-sortIcon>
+            </th>
+            <th  pSortableColumn="IsCompleted" style="width: 2.25em">Completed
+              <p-sortIcon field="IsCompleted"></p-sortIcon>
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-car>
+        <tr>
+            <td>{{car.Id}}</td>
+            <td>{{car.Title}}</td>
+            <td>{{car.Description}}</td>
+            <td>{{car.IsCompleted?"Completed":"Not Completed"}}</td>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="emptymessage">
+      <tr>
+        <td colspan="4">
+          <div style="text-align: center;">No Data</div>
+        </td>
+    
+     </tr>
+    </ng-template>
+</p-table>
+</p-dialog>

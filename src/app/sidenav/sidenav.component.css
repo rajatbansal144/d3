@@ -1,0 +1,73 @@
+.menu_icon{
+    color: rgba(87, 85, 83);  
+    font-size: 1.5rem;
+}
+.slide{
+    transition: left 0.5s ease; /* Animation styles are just for demo */
+    left:0;
+}
+/* @keyframes mymove {
+    from {left: 0px;}
+    to {left: 30px;}
+  } */
+
+.col_2 {
+    flex: 0 0 4%;
+    max-width: 4%;
+}
+
+.col_10 {
+    flex: 0 0 96%;
+    max-width: 96%;
+}
+.bg_color{
+    background-color: rgba(241, 239, 237);
+}
+div:focus {
+    background-color:rgba(87, 85, 83);  
+    border-left: 4px solid rgb(63, 163, 255);   
+    outline: none;
+}
+.sidenav{
+    position: fixed;
+    z-index: 1;
+    background-color: rgb(155, 151, 147);
+    width: 96px;
+    height: 100vh;
+}
+/* .slider{
+    animation: mymove1 5s ;
+}
+
+
+@keyframes mymove1 {
+  from {left: 0px;}
+  to {left: 200px;}
+  
+}
+ */
+
+
+button{
+    border: 0;
+    padding: 0;
+    
+    outline: none;
+}
+.icon_style{
+    font-size: 20px;
+    color: white;
+}
+.icon_style2{
+    font-size: 43px;
+    color: white;
+}
+.border_thickness{
+    border: 2px solid white;
+}
+.text_style{
+    font-size:13px ;
+    color: white;
+    font-weight: 500;
+    /* text-align: center */
+}

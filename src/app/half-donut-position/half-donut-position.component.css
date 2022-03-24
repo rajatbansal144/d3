@@ -1,0 +1,20 @@
+.border_bt{
+    border-bottom: 1px solid grey;
+   
+}
+.bg_color{
+    height: 110px;
+    background-color:rgb(221, 211, 211);
+}
+
+.width{
+    width: 51px;
+}
+
+.width2{
+    width: 70px;
+}
+.font_color{
+    color: rgb(99, 95, 95);
+    font-weight: 450;
+}

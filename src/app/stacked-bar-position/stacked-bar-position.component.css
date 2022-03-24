@@ -1,0 +1,21 @@
+.border_bt{
+    border-bottom: 1px solid grey;
+   
+}
+
+
+.width{
+    width: 51px;
+}
+
+
+.font_color{
+    color: rgb(99, 95, 95);
+    font-weight: 500;
+}
+
+.size{
+    width: 220px;
+    height: 25px;
+    background-color: #CCCCCC;
+}

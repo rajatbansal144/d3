@@ -1,0 +1,41 @@
+<div *ngIf="(halfDonutInputData[0].label!='No Data')" class="row m-0">
+
+  <div class="col-2 p-0 text-center  ">
+    <div class="border_bt width font_color ml-auto">{{halfDonutInputData[0].count}}</div>
+    <div class="pt-0 width font_color ml-auto">{{halfDonutInputData[0].count+halfDonutInputData[1].count}}</div>
+  </div>
+  <div class="col-7 p-0 pl-5 row m-0 text-center">
+    <div class="">
+      <app-half-donut [halfDonutInputData]="halfDonutInputData"></app-half-donut>
+    </div>
+    <div class="mt-auto pl-1">{{halfDonutInputData[0].count+halfDonutInputData[1].count}}K</div>
+
+  </div>
+
+  <div class="col-3 text-center ">
+    <div class="border_bt width2 font_color ">Actual</div>
+    <div class="pt-0 width font_color">Budgeted</div>
+  </div>
+
+
+</div>
+<div *ngIf="(halfDonutInputData[0].label=='No Data')" class="row m-0">
+  <div class="col-3 text-center  ">
+    <div class="border_bt width font_color ml-auto">--</div>
+    <div class="pt-0 width font_color ml-auto">--</div>
+  </div>
+  <div class="col-6 p-0 pl-5 row m-0 text-center">
+    <div class="">
+      <app-half-donut [halfDonutInputData]="halfDonutInputData"></app-half-donut>
+    </div>
+    <div class="mt-auto pl-1">0</div>
+
+  </div>
+
+  <div class="col-3 text-center ">
+    <div class="border_bt width2 font_color ">Actual</div>
+    <div class="pt-0 width font_color">Budgeted</div>
+  </div>
+
+
+</div>

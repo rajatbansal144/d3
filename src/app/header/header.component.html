@@ -1,0 +1,49 @@
+<Header class=" height row m-0 bg_color d-flex">
+  <div class="col-3 m-0 mt-2 row">
+    <div class="">
+      <img src="../assets/images/header_home.png" class=" img_size pl-1 logo_padding" width="30" height="30" alt="logo">
+    </div>
+    <div class="">
+      <p class=" text_color m-0  pl-2 ">Integrated CCC</p>
+    </div>
+  </div>
+
+
+  <div class="col-4 Search_top_padding pr-0">
+    <div class="search-container row">
+      <input type="text" list="search" class="pl-2" placeholder="Search" name="txtsearch" id="txtsearch"> 
+      <datalist id="search">
+        <option *ngFor="let c of codeList" [value]="c.name" >{{c.name}}</option>
+      </datalist>
+      <div class="search_icon"><i class="pl-1 fa fa-search" aria-hidden="true"></i></div>
+    </div>
+  </div>
+
+
+  <div class="col-5 m-0 row  pl-0">
+    <div>
+      <i class="  icon_pt  pr-4 fa fa-exclamation-triangle notify_icon " aria-hidden="true"></i>
+      <span class="badge1 ">2</span>
+    </div>
+    <div class="pt_bell">
+      <div class="dot  ">
+        <i class=" fa fa-bell bell_font" aria-hidden="true"></i>
+        <span class="badge2">3</span>
+      </div>
+    </div>
+    <i class="pl-4 fa fa-filter notify_icon" aria-hidden="true"></i>
+
+    <div class="d-flex ml-auto">
+      <i class=" fa fa-user notify_icon  " aria-hidden="true"></i>
+      <div class="px-2 ">
+        <p class=" m-0 name_font">Alex Craig</p>
+        <p class="m-0 designation_font">Project Manager</p>
+      </div>
+      <!-- <div class="px-1 ">
+        <span class="px-3 m-0 name_font">Alex Craig</span><br>
+        <span class="m-0 designation_font">Project Manager</span>
+      </div> -->
+      <i class="fa fa-cog notify_icon" aria-hidden="true"></i>
+    </div>
+  </div>
+</Header>

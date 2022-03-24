@@ -1,0 +1,195 @@
+
+    <div class="row m-0">
+
+      <div class="col-8 pl_img mt-5">
+        <!-- <app-test></app-test> -->
+        <img src="./assets/images/img.JPG" alt="">
+   
+        <!-- <app-gauge1></app-gauge1> -->
+        <div class="row mx-0  p-0 mt_top pb-1 ">
+          <div class=" border col-6 p-0  mt-1 pt-1 pb-1">
+            <div class="text-center py-0">
+              <i class=" icon_size float-left pl-1 fa fa-calendar font_color" aria-hidden="true"></i>
+              <label class="font_weight">Schedule Performance</label>
+              <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true"></i>
+              <i class="pr-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+            </div>
+            <div class="row m-0">
+              <div class="row m-0 col-6">
+                <div class="mt-4 py-0 col-3 text-center">
+                  <span class="font_color">SPI</span>
+                </div>
+                <div class="float-right">
+                  <div class="col-9 ml-auto">
+                    <!-- <app-donut></app-donut> -->
+                  </div>
+                </div>
+              </div>
+              <div class="row m-0 col-6  border-left">
+                <div class="">
+                  <!-- <app-donut2></app-donut2> -->
+                </div>
+                <div>
+                  <label class="mt-4 font_color  text-center">Missed 2 of 16</label>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class=" border col-6 p-0 mt-1 pt-1 pb-1">
+            <div class=" py-0">
+              <i class=" icon_size float-left pl-1 fa fa-file-text-o font_color" aria-hidden="true"></i>
+              <label class="font_weight pl-1">Task Status</label>
+              <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true"></i>
+              <i class="pr-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+            </div>
+            <div class="row">
+              <div class="col-4">
+                 Completed
+                <app-gauge1></app-gauge1>
+              </div>
+              <div class="col-4">
+                in-progress
+                <app-gauge2></app-gauge2>
+            
+              </div>
+              <div class="col-4">
+                yet to start
+                <app-gauge3></app-gauge3>
+              </div>
+            </div>
+           
+          </div>
+        </div>
+      </div>
+      <div class="col-4 p-0 ">
+        <div class=" border p-0 mt-1 pt-1 pb-1">
+          <div class="text-center py-0">
+            <i class=" icon_size float-left pl-1 fa fa-calendar font_color" aria-hidden="true"></i>
+            <label class="font_weight">Schedule Performance</label>
+            <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true"></i>
+            <i class="pr-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+          </div>
+          <div class="row m-0">
+            <div class="row m-0 col-6">
+              <div class="mt-4 py-0 col-3 text-center">
+                <span class="font_color">SPI</span>
+              </div>
+              <div class="float-right">
+                <div class="col-9 ml-auto">
+                  <app-donut></app-donut>
+                </div>
+              </div>
+            </div>
+            <div class="row m-0 col-6  border-left">
+              <div class="">
+                <app-donut2></app-donut2>
+              </div>
+              <div>
+                <label class="mt-4 font_color  text-center">Missed 2 of 16</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class=" border p-0 pt-1 mt-1 pb-1">
+          <div class="text-center">
+            <i class="pl-1 icon_size float-left fa fa-btc font_color" aria-hidden="true"></i>
+            <label class="font_weight">Cost Performance</label>
+            <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true"></i>
+            <i class=" pr-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+          </div>
+          <div class="row m-0">
+    
+            <div class="col-3 text-center  ">
+              <div class="border_bt width font_color ml-auto">1925</div>
+              <div class="pt-0 width font_color ml-auto">3000</div>
+            </div>
+            <div class="col-6 p-0 pl-5 row m-0 text-center">
+              <div class="">
+                <app-half-donut></app-half-donut>
+              </div>
+              <div class="mt-auto pl-1">3000K</div>
+    
+            </div>
+    
+            <div class="col-3 text-center ">
+              <div class="border_bt width2 font_color ">Actual</div>
+              <div class="pt-0 width font_color">Budgeted</div>
+            </div>
+    
+    
+          </div>
+        </div>
+        <div class=" border p-0 mt-1 pt-1 pb-1">
+          <div class="text-center py-0">
+            <i class=" icon_size float-left pl-1 fa fa-shield font_color" aria-hidden="true"></i>
+            <label class="font_weight">Safety Incidents</label>
+            <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true"></i>
+            <i class="pr-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+          </div>
+          <div class="row m-0">
+    
+            <div class="col-3 text-center  ">
+              <div class="border_bt width font_color ml-auto">8</div>
+              <div class="pt-0 width font_color ml-auto">total</div>
+            </div>
+    
+            <div class="col-9 mt-0 ">
+              <app-stacked-bar></app-stacked-bar>
+            </div>
+          </div>
+        </div>
+        <div class=" border p-0 mt-1 pt-1 pb-1">
+          <div class="text-center py-0">
+            <i class=" icon_size float-left pl-1 fa fa-line-chart font_color" aria-hidden="true"></i>
+            <label class="font_weight">Current Progress</label>
+            <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true"></i>
+            <i class="pr-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+          </div>
+          <div class="text-center">
+            <app-pie></app-pie>
+          </div>
+        </div>
+        <div class="row m-0  p-0 mt-1  pb-1 ">
+          <div class="col-6 row m-0 p-0 border">
+            <div class="col-5 p-0 bg_color text-center">
+              <div class="mt-4">
+                <i class="fa fa-plus-circle plus_icon   " aria-hidden="true"></i>
+              </div>
+            </div>
+            <div class="col-7 p-0 text-center">
+              <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color pt-1" aria-hidden="true"></i>
+              <div class="mt-4">
+                <p class="m-0">Add New </p>
+                <p class="m-0">KPI</p>
+              </div>
+            </div>
+          </div>
+    
+          <!-- <div class="col-6 p-0 border">
+            <div class="">
+              <i class="px-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true"></i>
+              <i class="pr-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+    
+            </div>
+          </div> -->
+    
+          <div class="col-6 row m-0 p-0 border">
+            <div class="col-6 p-0  text-center">
+              <div class="">
+                <!-- <i class="fa fa-plus-circle plus_icon  " aria-hidden="true"></i> -->
+                <img src="../assets/images/bot.png" height="100px" alt="Bot for you">
+                <!-- src\assets\images\bot.png -->
+              </div>
+            </div>
+            <div class="col-6 p-0 text-center">
+              <i class="px-1 pt-1 icon_size2 float-right fa fa-ellipsis-v font_color" aria-hidden="true"></i>
+              <i class="pr-1 pt-1 icon_size2 float-right fa fa-external-link font_color" aria-hidden="true"></i>
+              <div class="mt-4">
+                <p class="m-0">Cognitive </p>
+                <p class="m-0">Assistant</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
